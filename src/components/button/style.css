@@ -1,0 +1,95 @@
+/**
+ * btn
+ * A wholesome, good-for-you, 100% clickable button.
+ * Must be used with a subclass (e.g. btn--primary).
+ */
+.btn {
+  background-color: transparent;
+  border-width: 0;
+  box-shadow: 0 .2rem .2rem -.1rem rgba(0, 0, 0, .33);
+  cursor: pointer;
+  font-family: var(--heading-font-family);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.125;
+  padding: .625em 1.25em;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition:
+    background-color var(--duration-quick) ease-in-out,
+    box-shadow var(--duration-quick) ease-in-out,
+    color var(--duration-quick) ease-in-out;
+}
+
+/**
+ * btn--primary
+ * The primary button on a form, component, etc. There should be only one
+ * primary button per component.
+ * @extends btn
+ */
+.btn--primary {
+  background-color: var(--color-brand-contrast);
+}
+
+.btn--primary,
+.btn--primary:hover {
+  color: var(--color-background);
+}
+
+/**
+ * btn--danger
+ * A button that results in something you can't revert, deletes etc.
+ * @extends btn
+ */
+.btn--danger {
+  background-color: var(--color-danger);
+}
+
+.btn--danger,
+.btn--danger:hover {
+  color: var(--color-background);
+}
+
+/**
+ * btn--default
+ * A normal button; the workhorse of all things clickable
+ * TODO
+ * @extends btn
+ */
+.btn--default {
+}
+
+.btn--default:hover {
+}
+
+.btn--default:active {
+}
+
+/**
+ * btn--small
+ * A smaller button, for less-important things
+ * @mixin
+ */
+.btn--small {
+  font-size: .75rem;
+}
+
+/**
+ * btn--tiny
+ * A tiny button, for very unimportant things
+ * @mixin
+ */
+.btn--tiny {
+  font-size: .625rem;
+  padding: .5em .75em;
+  height: 1.25rem;
+}
+
+/* ---- States -------------------------------------------------------------- */
+
+.btn:disabled,
+.btn:disabled:hover {
+  background-color: var(--color-disabled-background);
+  color: var(--color-disabled);
+}
